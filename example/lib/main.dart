@@ -7,8 +7,6 @@ void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-
-
   @override
   Widget build(BuildContext context) => MaterialApp(
         title: 'Widgets To Image',
@@ -28,6 +26,7 @@ class MainPage extends StatefulWidget {
 class MainPageState extends State<MainPage> {
   // WidgetsToImageController to access widget
   WidgetsToImageController controller = WidgetsToImageController();
+
   // to save image bytes of widget
   Uint8List? bytes;
 
@@ -88,9 +87,9 @@ class MainPageState extends State<MainPage> {
           ),
           Container(
             padding: const EdgeInsets.all(16),
-            child: Column(
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text(
                   "Title",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
